@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>펫 홈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="header">
+    <div class="header__inner">
+      <!-- OS status bar from the design; drop this block if the host provides one -->
+      <div class="status-bar" aria-hidden="true">
+        <span class="status-bar__time">3:14</span>
+        <img class="status-bar__levels" src="assets/levels.svg" alt="">
+      </div>
+
+      <div class="actions">
+        <button class="icon-btn" type="button" aria-label="알림 추가"><img class="actions__bell" src="assets/bell.svg" alt=""></button>
+        <div class="actions__right">
+          <button class="icon-btn" type="button" aria-label="검색"><img class="actions__search" src="assets/search.svg" alt=""></button>
+          <button class="icon-btn" type="button" aria-label="장바구니 담기"><img class="actions__basket" src="assets/add-basket.png" alt=""></button>
+        </div>
+      </div>
+
+      <nav class="tabs" role="tablist" aria-label="카테고리">
+        <button class="tab is-active" role="tab" aria-selected="true" type="button">봄맞이<span class="tab__line"><img src="assets/line-24.svg" alt=""></span></button>
+        <button class="tab" role="tab" aria-selected="false" type="button">유기견</button>
+        <button class="tab" role="tab" aria-selected="false" type="button">할인 이..</button>
+        <button class="tab" role="tab" aria-selected="false" type="button">포인트..</button>
+        <button class="tab" role="tab" aria-selected="false" type="button">끝장나..</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="carousel" aria-label="프로모션 배너">
+      <div class="carousel__track" id="track" tabindex="0">
+        <article class="slide"><img class="slide__img slide__img--4" src="assets/card-4.png" alt="입양 캠페인: 가족을 기다리는 아이들"></article>
+        <article class="slide"><img class="slide__img slide__img--1" src="assets/card-1.png" alt="프로모션 배너 2"></article>
+        <article class="slide"><div class="slide__crop"><img src="assets/card-2.png" alt="프로모션 배너 3"></div></article>
+        <article class="slide"><img class="slide__img slide__img--3" src="assets/card-3.png" alt="프로모션 배너 4"></article>
+      </div>
+      <div class="carousel__pager" aria-live="polite"><span id="pager">1/4</span></div>
+    </section>
+
+    <section class="home">
+      <h1 class="home__greeting">안녕하세요! 꼴뚜끼끼 님</h1>
+
+      <article class="pet">
+        <header class="pet__head">
+          <img class="pet__avatar" src="assets/frame-3.png" alt="뽀삐">
+          <div>
+            <h2 class="pet__name">뽀삐</h2>
+            <p class="pet__meta">2살 비글(남아)</p>
+          </div>
+          <a class="pet__more" href="#">자세히 보기</a>
+        </header>
+
+        <div class="stats">
+          <div class="stat">
+            <img class="stat__icon stat__icon--sm" src="assets/vaccine.svg" alt="">
+            <p class="stat__label">다음 예방 접종</p>
+            <p class="stat__value">D-14</p>
+            <p class="stat__sub">종합백신</p>
+          </div>
+          <div class="stat">
+            <img class="stat__icon stat__icon--scale" src="assets/scale.png" alt="">
+            <p class="stat__label">최근 체중</p>
+            <p class="stat__value">5.2kg</p>
+            <p class="stat__sub">05.01 기록</p>
+          </div>
+          <div class="stat">
+            <img class="stat__icon stat__icon--sm" src="assets/hospital.svg" alt="">
+            <p class="stat__label">최근 방문 병원</p>
+            <p class="stat__value stat__value--sm">해피동물병원</p>
+            <p class="stat__sub">26.09.10 방문</p>
+          </div>
+        </div>
+
+        <a class="alert" href="#">
+          <span class="alert__icon"><img src="assets/ellipse-57.svg" alt=""><b aria-hidden="true">!</b></span>
+          <span class="alert__text">광견병 예방접종 시기가 다가왔어요.</span>
+          <span class="alert__more">자세히 보기<span class="alert__chevron"><img src="assets/chevron.svg" alt=""></span></span>
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="메인 메뉴">
+    <img class="bn__home-bg" src="assets/ellipse-31.svg" alt="">
+    <a class="bn bn--shop" href="#" aria-label="쇼핑"><img src="assets/shopping-bag.png" alt=""></a>
+    <a class="bn bn--map" href="#" aria-label="주소"><img src="assets/address.png" alt=""></a>
+    <a class="bn bn--home" href="#" aria-label="홈" aria-current="page"><img src="assets/home.svg" alt=""></a>
+    <a class="bn bn--people" href="#" aria-label="커뮤니티"><img src="assets/people.png" alt=""></a>
+    <a class="bn bn--profile" href="#" aria-label="내 정보"><img src="assets/profile.png" alt=""></a>
+  </nav>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

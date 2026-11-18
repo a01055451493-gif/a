@@ -1,0 +1,79 @@
+:root{
+  --green:#99d096; --green-name:#8ee69b; --white:#fff; --ink:#000; --pill:#d9d9d9;
+  --font:'Inter','Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff;font-family:var(--font);-webkit-text-size-adjust:100%}
+img{display:block;max-width:none}
+button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
+a{color:inherit;text-decoration:none}
+.app{position:relative;width:100%;max-width:393px;margin:0 auto;padding-bottom:74px;background:var(--green);min-height:100vh}
+
+/* header (design frame is 394x141, offset -4/-4) */
+.header{position:relative;height:137px;overflow:hidden;background:var(--white)}
+.header__inner{position:absolute;left:-4px;top:-4px;width:394px;height:141px}
+.status-bar{position:absolute;left:1px;top:0;width:393px;height:50px;font-family:-apple-system,'SF Compact Display',var(--font);font-weight:600;font-size:18px;letter-spacing:.5px}
+.status-bar__time{position:absolute;left:71.5px;top:18.38px;transform:translateX(-50%);color:#000;white-space:nowrap}
+.status-bar__levels{position:absolute;left:282px;top:23px;width:78.328px;height:13px}
+.actions{position:absolute;left:0;right:0;top:57px;height:31px;display:flex;align-items:center;justify-content:space-between;padding:0 10px 0 14px}
+.actions__right{display:flex;align-items:center;gap:16px}
+.actions__bell{width:26px;height:26px}
+.actions__search{width:26px;height:25.6px}
+.actions__basket{width:31px;height:31px;object-fit:contain}
+.tabs{position:absolute;left:0;right:0;bottom:0;height:53px;display:grid;grid-template-columns:repeat(5,1fr)}
+.tab{position:relative;padding-top:26px;font-size:16px;line-height:19px;font-weight:400;color:#000;white-space:nowrap}
+.tab__line{position:absolute;left:calc(50% - 33px);bottom:1px;width:61px;height:0}
+.tab__line img{width:61px;height:2px;margin-top:-1px}
+
+/* carousel */
+.carousel{position:relative;background:var(--white);margin-top:0;padding:7px 0 28px}
+.carousel__track{display:flex;gap:28px;overflow-x:auto;padding:0 20px;scroll-snap-type:x mandatory;scroll-padding-inline:20px;scrollbar-width:none}
+.carousel__track::-webkit-scrollbar{display:none}
+.slide{position:relative;flex:0 0 357px;height:510px;overflow:hidden;border-radius:25px;background:#fff;scroll-snap-align:start}
+.slide__img{position:absolute;object-fit:cover;pointer-events:none}
+.slide__img--4{left:-4px;top:-16px;width:378px;height:540px}
+.slide__img--1{left:-10px;top:-7px;width:373px;height:532px}
+.slide__img--3{left:-14px;top:-18px;width:376px;height:542px}
+.slide__crop{position:absolute;left:-23px;top:-5px;width:380px;height:536px;overflow:hidden;pointer-events:none}
+.slide__crop img{position:absolute;left:5.02%;top:.03%;width:100%;height:100.07%}
+.carousel__pager{position:absolute;top:17px;right:29px;display:flex;align-items:center;justify-content:center;width:53px;height:36px;border-radius:100px;background:var(--pill);font-weight:900;font-size:12px;color:#fff;pointer-events:none}
+
+/* home panel */
+.home{background:var(--green);border-radius:11px 11px 0 0;margin-top:-28px;padding:14px 10px 106px 11px;position:relative}
+.home__greeting{padding-left:2px;font-size:24px;font-weight:700;line-height:29px;color:#fff;margin-bottom:10px;white-space:nowrap}
+.pet{position:relative;background:#fff;border-radius:15px;height:248px;overflow:hidden}
+.pet__head{position:relative;height:89px}
+.pet__avatar{position:absolute;left:9px;top:10px;width:66px;height:66px;border-radius:10px;object-fit:cover}
+.pet__name{position:absolute;left:84px;top:21px;font-size:20px;font-weight:700;line-height:24px;color:var(--green-name)}
+.pet__meta{position:absolute;left:84px;top:48px;font-size:10px;font-weight:700;line-height:12px;color:var(--green-name)}
+.pet__more{position:absolute;left:272px;top:28px;width:93px;height:27px;border-radius:20px;background:var(--green);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 6px 0 7px}
+.stat{position:relative;height:89px;border-radius:5px;background:var(--green);color:#fff;text-align:center;padding-top:8px;font-weight:700}
+.stat__icon{position:absolute}
+.stat__icon--sm{left:5px;top:4px;width:19px;height:19px}
+.stat__icon--scale{left:2px;top:2px;width:24px;height:24px;object-fit:contain}
+.stat__label{font-size:10px;line-height:12px}
+.stat__value{height:24px;margin-top:12px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#fffdfd;white-space:nowrap}
+.stat__value--sm{font-size:16px}
+.stat__sub{margin-top:6px;font-size:10px;line-height:12px}
+.alert{position:absolute;left:7px;top:196px;width:359px;height:40px;border-radius:5px;background:var(--green);color:#fff;font-weight:700;display:flex;align-items:center;padding:0 7px 0 9px}
+.alert__icon{position:relative;flex:0 0 23px;height:23px;margin-right:5px}
+.alert__icon img{width:23px;height:23px}
+.alert__icon b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:15px}
+.alert__text{font-size:14px;white-space:nowrap}
+.alert__more{margin-left:auto;display:flex;align-items:center;font-size:10px;white-space:nowrap}
+.alert__chevron{position:relative;width:3px;height:8px;margin-left:5px}
+.alert__chevron img{position:absolute;inset:-5.37% -31.27% -5.9% -20.49%;width:auto;height:auto}
+
+/* bottom nav (fixed; icon geometry kept as % insets from the design) */
+.bottom-nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:393px;height:74px;background:#fff;filter:drop-shadow(0 -2px 2px rgba(0,0,0,.1))}
+.bottom-nav img{position:absolute;inset:0;width:100%;height:100%}
+.bn{position:absolute;display:block}
+.bn img{object-fit:contain}
+.bn--shop img,.bn--people img,.bn--profile img{opacity:.5}
+.bn__home-bg{inset:5.41% 43.83% 16.22% 40.55%!important;width:auto!important;height:auto!important}
+.bn--home{inset:28.38% 48.36% 36.49% 45.09%}
+.bn--shop{inset:28.38% 87.41% 35.14% 5.79%}
+.bn--map{left:23.9%;top:22px;width:26px;height:26px}
+.bn--people{inset:24.32% 26.2% 35.14% 66.25%}
+.bn--profile{inset:27.03% 6.05% 35.14% 86.9%}
